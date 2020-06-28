@@ -12,13 +12,12 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"wait-on http://localhost:3000 && electromon ./\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron-start": "electron ./",
-    "electromon-start": "electromon ./",
-    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electromon ./\""
+    "electromon-start": "electromon ./"
   },
   "eslintConfig": {
     "extends": "react-app"
